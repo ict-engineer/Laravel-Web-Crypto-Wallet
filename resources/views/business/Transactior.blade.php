@@ -1,0 +1,584 @@
+@extends('business.layout.layout')
+
+@section('businesscss')
+    <link  href="{{ asset('public/assets/css/vendor/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link  href="{{ asset('public/assets/css/vendor/datatables.responsive.bootstrap4.min.css') }}" rel="stylesheet">
+@endsection
+
+@section('content')
+<div>
+    <div class="toggle_radio">
+        <input type="radio" class="toggle_option" id="b2b_show" name="toggle_option">
+        <input type="radio" checked class="toggle_option" id="b2c_show" name="toggle_option">
+        <input type="radio" class="toggle_option" id="bbc_show" name="toggle_option">
+        <label for="b2b_show"><p>B2B</p></label>
+        <label for="b2c_show"><p>B2C</p></label>        
+        <label for="bbc_show"><p>All</p></label>
+        <div class="toggle_option_slider">
+        </div>
+    </div>
+</div>
+<div class="b2c-container">
+    <div class="row sortable">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header p-0 position-relative">
+                    <div class="position-absolute handle card-icon">
+                        <i class="simple-icon-shuffle"></i>
+                    </div>
+                </div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">Transaction amount(B2C)</h6>
+                    <h3 class="sub-title-number">$ 22,220</h3>
+                </div>
+            </div>
+        </div>        
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header p-0 position-relative">
+                    <div class="position-absolute handle card-icon">
+                        <i class="simple-icon-shuffle"></i>
+                    </div>
+                </div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">UnConfirmed Transactions (B2C)</h6>
+                    <h3 class="sub-title-number">19</h3>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="container-fluid" >
+        
+        <div class="row mb-4">
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">                        
+                        <div style="display:flex">
+                            <div>
+                                <h5 class="card-title">Transactions - B2C</h5>
+                            </div>                            
+                        </div>
+                        <table class="data-table data-table-feature">                            
+                            <thead>
+                                <tr>
+                                    <th style="padding:15px">ID</th>
+                                    <th style="padding:15px">Customer</th>                                
+                                    <th style="padding:15px">Customer Type</th>
+                                    <th style="padding:15px">Email</th>                                    
+                                    <th style="padding:15px">Transaction ID</th>                                    
+                                    <th style="padding:15px">Amount</th>
+                                    <th style="padding:15px">Amount(USD)</th>                                    
+                                    <th style="padding:15px">Status</th>
+                                    <th style="padding:15px">Note</th>
+                                    <th style="padding:15px">View on Network</th>                            
+                                    <th style="padding:15px">Actions</th>                                
+                                </tr>
+                            </thead>
+                            <tbody>                                                      
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="b2b-container">
+    <div class="row sortable">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header p-0 position-relative">
+                    <div class="position-absolute handle card-icon">
+                        <i class="simple-icon-shuffle"></i>
+                    </div>
+                </div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">Transaction amount(B2B)</h6>
+                    <h3 class="sub-title-number">$ 22,220</h3>
+                </div>
+            </div>
+        </div>        
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header p-0 position-relative">
+                    <div class="position-absolute handle card-icon">
+                        <i class="simple-icon-shuffle"></i>
+                    </div>
+                </div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">UnConfirmed Transactions (B2B)</h6>
+                    <h3 class="sub-title-number">10</h3>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="container-fluid" >
+        
+        <div class="row mb-4">
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">                        
+                        <div style="display:flex">
+                            <div>
+                                <h5 class="card-title">Transactions - B2B</h5>
+                            </div>                            
+                        </div>
+                        <table class="data-table data-table-feature">                            
+                            <thead>
+                                <tr>
+                                    <th style="padding:15px">ID</th>
+                                    <th style="padding:15px">Customer</th>                                
+                                    <th style="padding:15px">Customer Type</th>
+                                    <th style="padding:15px">Email</th>                                    
+                                    <th style="padding:15px">Transaction ID</th>                                    
+                                    <th style="padding:15px">Amount</th>
+                                    <th style="padding:15px">Amount(USD)</th>                                    
+                                    <th style="padding:15px">Status</th>
+                                    <th style="padding:15px">Note</th>
+                                    <th style="padding:15px">View on Network</th>                            
+                                    <th style="padding:15px">Actions</th>                                
+                                </tr>
+                            </thead>
+                            <tbody>                                                      
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2B</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2B</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2B</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2B</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2B</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2B</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2B</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bbc-container">
+    <div class="row sortable">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header p-0 position-relative">
+                    <div class="position-absolute handle card-icon">
+                        <i class="simple-icon-shuffle"></i>
+                    </div>
+                </div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">Transaction amount</h6>
+                    <h3 class="sub-title-number">$ 44,440</h3>
+                </div>
+            </div>
+        </div>        
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header p-0 position-relative">
+                    <div class="position-absolute handle card-icon">
+                        <i class="simple-icon-shuffle"></i>
+                    </div>
+                </div>
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">UnConfirmed Transactions</h6>
+                    <h3 class="sub-title-number">29</h3>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="container-fluid" >
+        
+        <div class="row mb-4">
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-body">                        
+                        <div style="display:flex">
+                            <div>
+                                <h5 class="card-title">Transactions</h5>
+                            </div>                            
+                        </div>
+                        <table class="data-table data-table-feature">                            
+                            <thead>
+                                <tr>
+                                    <th style="padding:15px">ID</th>
+                                    <th style="padding:15px">Customer</th>                                
+                                    <th style="padding:15px">Customer Type</th>
+                                    <th style="padding:15px">Email</th>                                    
+                                    <th style="padding:15px">Transaction ID</th>                                    
+                                    <th style="padding:15px">Amount</th>
+                                    <th style="padding:15px">Amount(USD)</th>                                    
+                                    <th style="padding:15px">Status</th>
+                                    <th style="padding:15px">Note</th>
+                                    <th style="padding:15px">View on Network</th>                            
+                                    <th style="padding:15px">Actions</th>                                
+                                </tr>
+                            </thead>
+                            <tbody>                                                      
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>     
+                                <tr>
+                                    <td style="padding:15px">1</td>
+                                    <td style="padding:15px">John Smith</td>                              
+                                    <td style="padding:15px">B2C</td>
+                                    <td style="padding:15px">john@smith.com</td>
+                                    <td style="padding:15px">21</td>
+                                    <td style="padding:15px">20 ETH</td>
+                                    <td style="padding:15px">458 USD</td>
+                                    <td style="padding:15px">Confirmed</td>
+                                    <td style="padding:15px">Buy headphone</td>                                    
+                                    <td style="padding:15px"><a type="button" href="" class="btn-secondary mb-1 btn-sm">Transaction</a></td>                                    
+                                    <td style="display:flex padding:3px">                                         
+                                        <button type="button" class="btn-danger mb-1 btn-sm remove-user"  > Refund </i></button>
+                                        <a type="button" href="" class="btn-secondary mb-1 btn-sm">Details</a>
+                                    </td>                                 
+                                </tr>                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection 
+
+@section('businessjs')
+    <script src="{{ asset('public/assets/js/vendor/datatables.min.js') }}"></script>
+    <script>
+        $(".data-table-feature").DataTable({
+            searching: true,
+            bLengthChange: true,
+            destroy: true,
+            info: true,
+            sDom: '<"row view-filter"<"col-sm-12"<"float-left"l><"float-right"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
+            pageLength: 6,
+            language: {
+              paginate: {
+                previous: "<i class='simple-icon-arrow-left'></i>",
+                next: "<i class='simple-icon-arrow-right'></i>"
+              }
+            },
+
+            drawCallback: function () {
+              $($(".dataTables_wrapper .pagination li:first-of-type"))
+                .find("a")
+                .addClass("prev");
+              $($(".dataTables_wrapper .pagination li:last-of-type"))
+                .find("a")
+                .addClass("next");
+
+              $(".dataTables_wrapper .pagination").addClass("pagination-sm");
+            }
+        });        
+    </script>
+@endsection
